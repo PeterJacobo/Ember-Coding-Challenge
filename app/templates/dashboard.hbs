@@ -1,0 +1,44 @@
+<Page::Header @title="Dashboard" />
+<Page::Content>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Customer Stats</h5>
+                    <div class="card-text" style="display:flex;flex-direction:column;">
+                        <p><strong>Total Customers:</strong> <span class="align-right">{{this.model.length}}</span></p>
+                        <p><strong>Total Budget:</strong> <span class="align-right">{{format-currency (total-budget this.model)}}</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Top Prospects</h5>
+                    <div class="card-text" style="display:flex;flex-direction:column;">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Company</th>
+                                    <th scope="col">Budget</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {{#each (top-prospects this.model) as |customer|}}
+                                <tr>
+                                    <td>{{customer.firstName}} {{customer.lastName}}</td>
+                                    <td>{{customer.company}}</td>
+                                    <td>{{format-currency customer.budget}}</td>
+                                </tr>
+                            {{/each}}
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</Page::Content>
