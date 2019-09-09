@@ -12,6 +12,7 @@ export default Controller.extend({
       filterAction(filterInputValue, this).then((filterResults) => this.set('Body', filterResults));
     },
   },
+
   filterBySearch(param, param2) {
     if (param !== '') {
       return param2.store.query('customer', { name: param });
@@ -19,6 +20,7 @@ export default Controller.extend({
       return param2.store.findAll('customer');
     }
   },
+
   sortProperty: 'lastName',
 
   customersSortProps: computed('sortProperty', function() {
