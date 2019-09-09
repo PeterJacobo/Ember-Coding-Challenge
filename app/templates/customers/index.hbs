@@ -4,6 +4,10 @@
     <h5 class="card-title">
       {{this.sortedCustomers.length}} Results
     </h5>
+      <label>
+          <Input @id="search" @type="text" @placeholder="Search Customers..." @key-up={{action "handleFilterEntry"}}></Input>
+      </label>
+      <!--      <label for="search">Search Customers</label>-->
     <div>
       <select class="form-control" onchange={{action (mut this.sortProperty) value="target.value"}}>
         <option value="lastName" selected={{eq this.sortProperty "lastName"}}>

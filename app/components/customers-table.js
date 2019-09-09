@@ -69,8 +69,19 @@ export default Component.extend({
   },
 
   actions: {
+    init() {
+      this._super(...arguments);
+      this.filterBySearch('').then((results) => this.set('results', results));
+    },
     onRowClick(row) {
       this.router.transitionTo('customers.customer', row.get('id'));
+    },
+    filterBySearch(param) {
+      if (param !== '') {
+        return this.model.filterBy('name', param);
+      } else {
+        return this.model.filterBy('name');
+      }
     }
   }
 });

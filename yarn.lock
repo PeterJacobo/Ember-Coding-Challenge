@@ -2243,7 +2243,7 @@ broccoli-funnel@2.0.1:
     symlink-or-copy "^1.0.0"
     walk-sync "^0.3.1"
 
-broccoli-funnel@^1.0.1, broccoli-funnel@^1.0.2:
+broccoli-funnel@^1.0.0, broccoli-funnel@^1.0.1, broccoli-funnel@^1.0.2:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/broccoli-funnel/-/broccoli-funnel-1.2.0.tgz#cddc3afc5ff1685a8023488fff74ce6fb5a51296"
   integrity sha1-zdw6/F/xaFqAI0iP/3TOb7WlEpY=
@@ -3900,6 +3900,15 @@ ember-inflector@^3.0.0:
   integrity sha512-fngrwMsnhkBt51KZgwNwQYxgURwV4lxtoHdjxf7RueGZ5zM7frJLevhHw7pbQNGqXZ3N+MRkhfNOLkdDK9kFdA==
   dependencies:
     ember-cli-babel "^6.6.0"
+
+ember-jquery@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/ember-jquery/-/ember-jquery-1.0.5.tgz#99186d3e123ce1164b86c15dec0bbda5e04dca19"
+  integrity sha512-pOTjWGrJZBSgvfVvEZq/FktC6mxBolSkp7M++Jag55YTzy5Ncf9y32AFFMMFWEj1yU/NuWriP3yTEkiTUJo1rA==
+  dependencies:
+    broccoli-funnel "^1.0.0"
+    broccoli-merge-trees "^2.0.0"
+    jquery "^3.0.0"
 
 ember-lifeline@^3.0.1:
   version "3.1.1"
@@ -5694,7 +5703,7 @@ jquery-deferred@^0.3.0:
   resolved "https://registry.yarnpkg.com/jquery-deferred/-/jquery-deferred-0.3.1.tgz#596eca1caaff54f61b110962b23cafea74c35355"
   integrity sha1-WW7KHKr/VPYbEQlisjyv6nTDU1U=
 
-jquery@^3.3.1, jquery@^3.4.1:
+jquery@^3.0.0, jquery@^3.3.1, jquery@^3.4.1:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
   integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
